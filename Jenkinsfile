@@ -4,7 +4,7 @@ pipeline {
         stage('Build'){
             steps {
                 echo 'display maven'
-                sh 'mvn -version'
+                /usr/bin/sh 'mvn -version'
             }
             post {
                 success {
