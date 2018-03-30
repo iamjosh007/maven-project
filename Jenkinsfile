@@ -4,7 +4,7 @@ pipeline {
         stage('Build'){
             steps {
                 echo 'display maven'
-                /usr/bin/sh 'mvn -version'
+                "sh 'export PATH=$MAVEN_HOME:$PATH && mvn clean package' "
             }
             post {
                 success {
