@@ -1,6 +1,9 @@
 pipeline {
     agent any
-    stages{
+        tools {
+           maven 'apache-maven-3.5.2'
+        }
+    stages {
         stage('Build'){
             steps {
                 echo 'display maven'
