@@ -3,7 +3,8 @@ pipeline {
     stages{
         stage('Build'){
             steps {
-                sh 'mvn clean package'
+                echo 'display maven'
+                sh 'mvn -version'
             }
             post {
                 success {
