@@ -1,10 +1,14 @@
 pipeline {
     agent any
+
+    tools {
+	maven 'localmaven'
+    }
+
     stages {
         stage('Build'){
             steps {
-                echo 'display maven'
-                "sh 'export PATH=$MAVEN_HOME:$PATH && mvn clean package' "
+                sh 'mvn clean package'
             }
             post {
                 success {
